@@ -1,0 +1,127 @@
+﻿* {
+    font-size: 1.3em;
+    font-family: Arial;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+
+
+h1 {
+    text-align: center;
+
+}
+
+
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+
+    border: hidden;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.answer {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+button {
+    background-color: #004374;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 200%;
+    text-align:center;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 45px;
+    width: 45px;
+    margin: 0 2px;
+    background-color: grey;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+    .step.active {
+        background-color: navy;
+        opacity: .5;
+    }
+
+    /* Finished Steps */
+    .step.finish {
+        background-color: navy;
+        opacity: 1;
+    }
+
+/*You finished the test, and now you get your results. */
+#Results {
+    display: table;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+/*Initially these are hidden*/
+.goodResults {
+    display: none;
+    margin: auto;
+}
+
+.badResults {
+    display: none;
+}
+
+.neutralResults {
+    display: none;
+    text-align: center;
+}
+
+
+h1.goodResults {
+    color: green;
+}
+
+h1.badResults {
+    color: red;
+}
+/*
+    My Employer's website these buttons were pictures. Literally pictures of buttons. Seriously
+    The link to the CDC's website was surrounded by these pictures and it was just there
+    No "Click Me" text that was a hyperlink. Just a hyperlink.
+    Looked like:
+    [BUTTON]https:www.cdc.gov/otherstuff[BUTTON]
+    I have no idea why they would do this. It gets worse
+    I tracked back where they got the "buttons" from. It was screen shot from the CDC website
+    I'm not fucking kidding
+    https://web.archive.org/web/20200514233444/https://www.cdc.gov/coronavirus/2019-ncov/
+    They couldn't even be assed to do 10 mins of desging. It took me 1 min to find the CDC colors.
+
+*/
+.sourceButton {
+    background-color: #0061A6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: Arial;
+    cursor: pointer;
+}

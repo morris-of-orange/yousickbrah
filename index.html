@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ya Sick Brah?</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+
+</head>
+<!--<p class="answer"> <button onclick="nextTab('GOOD')">GOOD</button></p>
+<p class="answer"> <button onclick="nextTab('BAD')">BAD</button></p>-->
+<!--Buttons for debugging the good and bad outcomes-->
+<body>
+    <div id="Questions">
+
+        <h1>You Sick Brah?</h1>
+        <div class="tab default">
+            <b>IN THE PAST 24 HOURS</b>, have you had any of the following symptoms?
+            <ol type="a">
+                <!--Look at this, I don't have to type "a. Fever", I just type "Fever" thatway if there are more symptoms, it's easy to update-->
+                <li>Fever (100.0°F, 38.7°C )</li>
+                <li>Cough (not due to Allergies)</li>
+                <li>Sore throat</li>
+                <li>Shortness of Breath</li>
+                <li>New loss of taste or smell</li>
+                <li>A Sense of Impending Doom</li>
+                <!--Made that last one up. Everyone has that one lol-->
+            </ol>
+
+            <p class="answer"> <button onclick="nextTab('BAD')">YES</button></p>
+            <p class="answer"><button onclick="nextTab('NEXT')">NO </button></p>
+
+            <p></p>
+        </div>
+
+
+
+
+        <div class="tab default">
+            Have you been tested for the virus that causes COVID-19 with a positive orpending result in the last 14 days?
+            <p></p>
+
+            <p class="answer"> <button onclick="nextTab('BAD')">YES</button></p>
+            <p class="answer"><button onclick="nextTab('NEXT')">NO </button></p>
+            <p></p>
+
+        </div>
+
+        <div class="tab default">
+            Have you had <b>CLOSE PERSONAL CONTACT</b>, with anyone who has been diagnosed with COVID-19 in the past 14 days?
+            <ol type="a">
+                <li>Withing 6 feet for a prolonged period of time (15 minutes or more)</li>
+                <li>In direct contact with infection secretions (been coughed/sneezed upon, etc.)</li>
+            </ol>
+            <p></p>
+            <p class="answer"> <button onclick="nextTab('BAD')">YES</button></p>
+            <p class="answer"><button onclick="nextTab('NEXT')">NO </button></p>
+            <p></p>
+        </div>
+
+        <div class="tab default">
+            Are you arriving/returning from out of the local area in the last 14 days?
+            <p></p>
+            <p class="answer"> <button onclick="nextTab('EXPAND3')">YES</button></p>
+            <p class="answer"><button onclick="nextTab('GOOD')">NO </button></p>
+
+            <p></p>
+        </div>
+
+        <div class="tab">
+            Is the place you visited going through a pandemic?
+            <p></p>
+            <p class="answer"> <button onclick="nextTab('BAD')">YES</button></p>
+            <p class="answer"><button onclick="nextTab('NEXT')">NO </button></p>
+            <p></p>
+        </div>
+
+        <div class="tab">
+            Did you travel via public transportation (air, train, bus)?
+            <p></p>
+            <p class="answer"> <button onclick="nextTab('BAD')">YES</button></p>
+            <p class="answer"><button onclick="nextTab('NEXT')">NO </button></p>
+            <p></p>
+        </div>
+
+        <div class="tab">
+            Did you have intermediate stops in a region going through a local pandemic?
+            <p></p>
+            <p class="answer"> <button onclick="nextTab('BAD')">YES</button></p>
+            <p class="answer"><button onclick="nextTab('GOOD')">NO </button></p>
+            <p></p>
+        </div>
+
+
+
+
+        <!-- That's right Other Company, I inserted a way to inform the user how faralong they are. they aren't always answering question 1 of 1 you morons -->
+        <div style="text-align:center;margin-top:40px;" ; id="circledots">
+            <span class="step"></span>
+        </div>
+    </div>
+
+    <div id="Results">
+        <h1 class="goodResults">Ya Good Brah!</h1>
+        <h2 class="goodResults">You can go to work, but go home if you don't feel good.</h2>
+        <h2 class="goodResults">Completed Date: <u id="datetime">a</u> </h2>
+
+        <h1 class="badResults">Go Back Home Brah!</h1>
+        <h2 class="badResults">Call the bossman a let him know you are getting tested.</h2>
+        <h2 class="badResults">It's Bad Karma to get your Friends and Family sick, Man.</h2>
+        <h2 class="badResults">Find a local testing facility below.</h2>
+        <h3 class="badResults"></h3>
+
+        <img src="data:image/png;base64,R0lGODlhAgACAIAAAP///wAAACH5BAEAAAAALAAAAAACAAIAAAIChFEAOw==" id="mainPic" class="Good Bad" />
+        <p></p>
+        <!--This starts out as a single white pixel. I'm not hiding a tracker, I just need a blank image. UNLIKE QUESTION MARK WHO USED A TRACKING PIXEL LIKE A BITCH-->
+        <p class="neutralResults"><a href="https://www.pexels.com/@cottonbro/collections/">Image Source</a></p>
+        <!--Buttons that lead you to links, they look nice and I can change how they look in the CSS. THey aren't just a screenshot of a button i got from CDC.gov QUESTIONMARK-->
+        <p><button class="sourceButton neutralResults" onclick="window.open(' https://www.hhs.gov/coronavirus/community-based-testing-sites/index.html');">Find A Local Testing Facility</button></p>
+        <p><button class="sourceButton neutralResults" onclick="window.open('https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html' );">What to Do If You Are Sick</button></p>
+        <p><button class="sourceButton neutralResults" onclick="window.open('https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html');">How to Protect Yourself</button></p>
+        <p><button class="sourceButton neutralResults" onclick="window.open('https://www.youtube.com/watch?v=8VoCwno6UM0');">Cheer Up!</button></p>
+
+
+    </div>
+
+
+    <script src="assets/main.js" type="text/javascript"></script>
+</body>
+</html>
